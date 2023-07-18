@@ -21,7 +21,7 @@ class SpActivity : AppCompatActivity() {
     private fun bindSplash(){
         Handler(Looper.myLooper()!!).postDelayed({
             startActivity(Intent(applicationContext , HomeActivity::class.java))
-        },6000)
+        },700)
 
     }
 

@@ -4,72 +4,78 @@
     <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/screen_bg"
-        android:id="@+id/drawerLayout">
+        android:background="@color/screen_bg">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <LinearLayout
-                android:orientation="vertical"
-                android:background="@color/white"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:padding="@dimen/_10sdp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/imgMenu"
-                        android:src="@drawable/img_menu"
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"/>
-
-                    <EditText
-                        android:visibility="invisible"
-                        android:hint="Search here"
-                        android:id="@+id/inputSearch"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_45sdp"/>
-
-                    <ImageView
-                        android:id="@+id/imgSearch"
-                        android:src="@drawable/search_icon"
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"/>
-
-                </LinearLayout>
+                android:layout_height="wrap_content"
+                android:background="@color/sea_green">
 
                 <ImageView
-                    android:layout_gravity="center_horizontal"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/img_quran_kareem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_100sdp"/>
+                    android:id="@+id/imgMenu"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:src="@drawable/ic_manu" />
 
-                <TextView
-                    android:padding="@dimen/_10sdp"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_22sdp"
-                    android:layout_gravity="center_horizontal"
-                    android:textColor="@color/black"
-                    android:text="The Holy Quran"
+                <EditText
+                    android:id="@+id/inputSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_normal"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/imgSearch"
+                    android:layout_toEndOf="@+id/imgMenu"
+                    android:hint="Search here"
+                    android:backgroundTint="@color/white"
+                    android:textColorHint="@color/white"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:src="@drawable/ic_search" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/text_normal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/bg_button"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="To be continue"
+                    android:textAllCaps="false" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
 
         </LinearLayout>
 

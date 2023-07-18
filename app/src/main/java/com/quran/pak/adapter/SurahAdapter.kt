@@ -1,5 +1,6 @@
 package com.quran.pak.adapter
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -23,13 +24,9 @@ class SurahAdapter(var list : List<Surah>) : RecyclerView.Adapter<SurahAdapter.S
     override fun onBindViewHolder(holder: SurahViewHolder, position: Int) {
         holder.bindSurahNumber(list[position].index)
         holder.bindName(list[position].name.`in`)
+        holder.bindNameAR(list[position].name.ar)
         holder.bindEnglishName(list[position].translation.en)
     }
-
-    fun updateData(newList: List<Surah>) {
-        list = newList
-    }
-
 
     inner class SurahViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) , View.OnClickListener{
 
@@ -45,6 +42,10 @@ class SurahAdapter(var list : List<Surah>) : RecyclerView.Adapter<SurahAdapter.S
             val mName = itemView.findViewById<TextView>(R.id.item_row_name)
             mName.text = name
         }
+        fun bindNameAR(name : String){
+            val mName = itemView.findViewById<TextView>(R.id.item_name_ar)
+            mName.text = name
+        }
         fun bindEnglishName(name : String){
             val mName = itemView.findViewById<TextView>(R.id.item_row_english_name)
             mName.text = name
@@ -55,6 +56,12 @@ class SurahAdapter(var list : List<Surah>) : RecyclerView.Adapter<SurahAdapter.S
             surahIndex = list[adapterPosition].index
             v.context.startActivity(intent)
         }
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun filterList(filteredData: ArrayList<Surah>) {
+        this.list = filteredData
+        notifyDataSetChanged()
     }
 
 }
