@@ -61,13 +61,14 @@
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    style="@style/text_normal"
+                    android:id="@+id/last_read"
+                    style="@style/text_normal_semi_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_10sdp"
                     android:background="@drawable/bg_button"
                     android:paddingHorizontal="@dimen/_10sdp"
-                    android:text="To be continue"
+                    android:text="Last read"
                     android:textAllCaps="false" />
 
                 <androidx.recyclerview.widget.RecyclerView

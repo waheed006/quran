@@ -1,5 +1,7 @@
 package com.quran.pak.fragment
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,38 +19,36 @@ import com.quran.pak.viewmodel.SurahListViewModel
 
 
 class VersesFragment : Fragment() {
-    private lateinit var binding : FragmentVersesBinding
-    private lateinit var viewModel : SurahListViewModel
+    private lateinit var binding: FragmentVersesBinding
+    private lateinit var viewModel: SurahListViewModel
+    private lateinit var sharedPref: SharedPreferences
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentVersesBinding.inflate(inflater , container , false)
+        binding = FragmentVersesBinding.inflate(inflater, container, false)
+        sharedPref =
+            requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        setupViewModel()
+        loadData()
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setupViewModel()
-
-        loadData()
-    }
-    private fun setupViewModel(){
+    private fun setupViewModel() {
         viewModel = ViewModelProvider(requireActivity())[SurahListViewModel::class.java]
     }
 
-    private fun loadData(){
+    private fun loadData() {
         getData()
     }
-    private fun getData(){
 
-        val index = surahIndex -1
+    private fun getData() {
+
+        val index = surahIndex - 1
         /*val urdu = parseJSONFromAssets(requireContext(), "urdu_quran.json")
         val english = parseJSONFromAssets(requireContext(), "english_quran.json")
         val arabic = parseJSONFromAssets(requireContext(), "arabic_indopak.json")
 */
-
 
         val adapter = VersesAdapter(
             false,
@@ -57,9 +57,15 @@ class VersesFragment : Fragment() {
             englishList.suras[index].ayas,
             requireContext()
         )
+
         binding.viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         binding.viewpager.adapter = adapter
-
-
+        val lastRead = sharedPref.getBoolean("LAST_READ", false)
+        if (lastRead) {
+            binding.viewpager.currentItem = sharedPref.getInt("LAST_POSITION", 0)-1
+            val editor = sharedPref.edit()
+            editor.putBoolean("LAST_READ", false)
+            editor.apply()
+        }
     }
 }

@@ -2,7 +2,6 @@ package com.quran.pak.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +21,8 @@ class VersesAdapter(
     private val context: Context,
 
     ) : RecyclerView.Adapter<VersesAdapter.VersesViewHolder>() {
-
+    private val sharedPref =
+        context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
     inner class VersesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindArabic(text: String) {
             val mText = itemView.findViewById<TextView>(R.id.item_view_arabic)
@@ -86,6 +86,8 @@ class VersesAdapter(
         holder.bindUrdu(urduList[position].text)
         holder.bindEnglish(englishList[position].text)
 
-
+        val editor = sharedPref.edit()
+        editor.putInt("LAST_POSITION", position)
+        editor.apply()
     }
 }

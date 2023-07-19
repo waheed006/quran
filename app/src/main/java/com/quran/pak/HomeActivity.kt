@@ -1,7 +1,9 @@
 package com.quran.pak
 
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.quran.pak.adapter.SurahAdapter
 import com.quran.pak.databinding.ActivityHomeBinding
 import com.quran.pak.model.Surah
+import com.quran.pak.util.surahIndex
 import com.quran.pak.viewmodel.SurahViewModel
 
 
@@ -25,10 +28,26 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val sharedPref: SharedPreferences =
+            this.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.putBoolean("LAST_READ", false)
+        editor.apply()
+
 
         binding.inputSearch.addTextChangedListener { editable ->
             filterByName(editable.toString())
         }
+
+        binding.lastRead.setOnClickListener {
+            val lastIndex = sharedPref.getInt("surahIndex", 1)
+            editor.putBoolean("LAST_READ", true)
+            editor.apply()
+            val intent = Intent(this , DetailActivity::class.java)
+            surahIndex = lastIndex
+            startActivity(intent)
+        }
+
         setupRecyclerView()
         loadData()
         setupDrawer()
@@ -58,7 +77,7 @@ class HomeActivity : AppCompatActivity() {
         viewModel.loadSurahListFromAsset().observe(this) {
             if (it != null) {
                 surahList.addAll(it)
-                adapter = SurahAdapter(surahList)
+                adapter = SurahAdapter(surahList, this@HomeActivity)
                 binding.recyclerview.adapter = adapter
 
             }

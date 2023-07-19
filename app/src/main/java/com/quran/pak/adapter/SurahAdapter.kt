@@ -1,18 +1,24 @@
 package com.quran.pak.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.quran.pak.DetailActivity
+import com.quran.pak.HomeActivity
 import com.quran.pak.R
 import com.quran.pak.model.Surah
 import com.quran.pak.util.surahIndex
 
-class SurahAdapter(var list : List<Surah>) : RecyclerView.Adapter<SurahAdapter.SurahViewHolder>() {
+class SurahAdapter(var list: List<Surah>, val context: Context) : RecyclerView.Adapter<SurahAdapter.SurahViewHolder>() {
+    val sharedPreferences: SharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+    val editor = sharedPreferences.edit()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SurahViewHolder {
         return SurahViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.surah_item_row , parent , false))
     }
@@ -54,6 +60,8 @@ class SurahAdapter(var list : List<Surah>) : RecyclerView.Adapter<SurahAdapter.S
         override fun onClick(v: View) {
             val intent = Intent(v.context , DetailActivity::class.java)
             surahIndex = list[adapterPosition].index
+            editor.putInt("surahIndex", surahIndex)
+            editor.apply()
             v.context.startActivity(intent)
         }
     }
