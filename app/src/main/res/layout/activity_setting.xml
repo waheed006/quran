@@ -1,145 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            android:id="@+id/english"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:background="@color/colorPrimary">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textStyle="bold"
-                    android:padding="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:text="English Language"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/btBack"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/todo" />
 
-                <CheckBox
-                    android:id="@+id/checkBoxEnglish"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+        <TextView
+            style="@style/text_extra_large_semi_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/setting"
+            android:textColor="@color/white" />
 
-        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/urdu"
-            android:layout_marginTop="@dimen/_2sdp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp">
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/english"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_height="wrap_content">
 
+        <TextView
+            style="@style/text_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/english_language"
+            />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textStyle="bold"
-                    android:padding="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:text="Urdu Language"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:id="@+id/checkBoxUrdu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/privacy"
-            android:layout_marginTop="@dimen/_2sdp"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textStyle="bold"
-                    android:padding="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:text="Privacy"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:visibility="invisible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rate"
-            android:layout_marginTop="@dimen/_2sdp"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textStyle="bold"
-                    android:padding="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:text="Rate Us"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:visibility="invisible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/share"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textStyle="bold"
-                    android:padding="@dimen/_10sdp"
-                    android:layout_weight="1"
-                    android:text="Share with friends"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-
-                <CheckBox
-                    android:visibility="invisible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
+        <CheckBox
+            android:id="@+id/checkBoxEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-</layout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray" />
+
+
+    <LinearLayout
+        android:id="@+id/urdu"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/text_large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/urdu_language"
+            />
+
+        <CheckBox
+            android:id="@+id/checkBoxUrdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/rate"
+        style="@style/text_large"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:text="@string/rate_us"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/share"
+        style="@style/text_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:text="@string/share_with_friends" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray" />
+    </LinearLayout>
+
+</LinearLayout>

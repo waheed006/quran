@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import com.quran.furqan.databinding.FragmentVersesBinding
 import com.quran.pak.adapter.VersesAdapter
-import com.quran.pak.databinding.FragmentVersesBinding
 import com.quran.pak.util.arabicList
 import com.quran.pak.util.englishList
 import com.quran.pak.util.surahIndex
@@ -45,11 +45,6 @@ class VersesFragment : Fragment() {
     private fun getData() {
 
         val index = surahIndex - 1
-        /*val urdu = parseJSONFromAssets(requireContext(), "urdu_quran.json")
-        val english = parseJSONFromAssets(requireContext(), "english_quran.json")
-        val arabic = parseJSONFromAssets(requireContext(), "arabic_indopak.json")
-*/
-
         val adapter = VersesAdapter(
             false,
             arabicList.suras[index].ayas,

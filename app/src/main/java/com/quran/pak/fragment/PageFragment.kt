@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.quran.furqan.databinding.FragmentPageBinding
 import com.quran.pak.adapter.VersesAdapter
-import com.quran.pak.databinding.FragmentPageBinding
 import com.quran.pak.util.arabicList
 import com.quran.pak.util.englishList
 import com.quran.pak.util.surahIndex
@@ -23,7 +23,7 @@ class PageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         binding = FragmentPageBinding.inflate(inflater, container, false)
         sharedPref =
             requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
@@ -48,7 +48,6 @@ class PageFragment : Fragment() {
     private fun getData() {
 
         val index = surahIndex - 1
-
         val adapter = VersesAdapter(
             true,
             arabicList.suras[index].ayas,
@@ -58,7 +57,5 @@ class PageFragment : Fragment() {
         )
         binding.recyclerview.adapter = adapter
 
-
     }
-
 }

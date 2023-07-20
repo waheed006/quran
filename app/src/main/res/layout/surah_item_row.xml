@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -17,23 +17,41 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginHorizontal="@dimen/_10sdp"
-            android:text="1"
+            android:text="@string/_1"
             android:textColor="@color/dark_gray" />
+
+        <ImageView
+            android:id="@+id/surahType"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/icon_kaba"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/item_name_ar"
-            style="@style/text_extra_large"
             android:layout_width="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="@dimen/_10sdp"
             android:layout_height="wrap_content"
-            android:text="الأعراف" />
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/surahType"
+            android:fontFamily="@font/indopak"
+            android:text="@string/surah"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_22ssp"
+            tools:ignore="RelativeOverlap" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/_2sdp"
             android:layout_toEndOf="@+id/item_view_count"
             android:orientation="vertical">
 
@@ -42,14 +60,14 @@
                 style="@style/text_large_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello Name" />
+                android:text="@string/hello_name" />
 
             <TextView
                 android:id="@+id/item_row_english_name"
                 style="@style/text_small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello English Name" />
+                android:text="@string/hello_english_name" />
 
         </LinearLayout>
 

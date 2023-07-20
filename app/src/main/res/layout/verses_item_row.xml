@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingVertical="@dimen/_10sdp"
     android:paddingHorizontal="@dimen/_10sdp"
-    android:rotationY="-180"
-    >
+    android:paddingVertical="@dimen/_15sdp"
+    android:rotationY="-180">
 
     <TextView
-        android:justificationMode="inter_word"
-        android:id="@+id/item_view_arabic"
-        android:textSize="@dimen/_22sdp"
-        android:layout_gravity="end"
-        android:textColor="@color/black"
-        android:fontFamily="@font/indopak"
-
-        android:text="الَّذِیْنَ یَنْقُضُوْنَ عَهْدَ اللّٰهِ مِنْ بَعْد"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:justificationMode="inter_word"
-        android:visibility="gone"
+        android:id="@+id/item_view_count"
         style="@style/text_large"
-        android:id="@+id/item_view_english"
-        android:textSize="@dimen/_16sdp"
-        android:textColor="@color/dark_gray"
-        android:text="I am english translation here to show how it represend translation"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="@string/_1"
+        android:textColor="@color/dark_gray" />
 
     <TextView
+        android:id="@+id/item_view_arabic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:fontFamily="@font/indopak"
         android:justificationMode="inter_word"
-        android:visibility="gone"
-        android:id="@+id/item_view_urdu"
-        android:textSize="@dimen/_20sdp"
+        android:text="@string/arabic"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_22sdp" />
+
+    <TextView
+        android:id="@+id/item_view_english"
+        style="@style/text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:text="@string/english"
         android:textColor="@color/dark_gray"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_view_urdu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:fontFamily="@font/jameel_noori"
-        android:text="لوریم اِپسم پرنٹنگ اور ٹائپسیٹنگ انڈسٹری کا صرف ڈمی متن ہے۔ لورینم ایپسم 1500s کے بعد سے ہی اس صنعت کا معیاری ڈمی متن رہا ہے"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:justificationMode="inter_word"
+        android:text="@string/urdu"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/_20sdp"
+        android:visibility="gone" />
 
 </LinearLayout>

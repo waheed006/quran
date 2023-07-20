@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">Read Quran</string>
+    <string name="app_name">Quran Furqan</string>
 
     <string name="privacy_url">www.google.com</string>
+    <string name="english_language">English Language</string>
+    <string name="_1">1</string>
+    <string name="todo">TODO</string>
+    <string name="hello_name">Hello Name</string>
+    <string name="hello_english_name">Hello English Name</string>
+    <string name="surah">سُوْرَۃُ الفَاتِحَة</string>
+    <string name="search_here">Search here</string>
+    <string name="last_read">Last read</string>
+    <string name="setting">Setting</string>
+    <string name="urdu_language">Urdu Language</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="arabic">الَّذِیْنَ یَنْقُضُوْنَ عَهْدَ اللّٰهِ مِنْ بَعْد</string>
+    <string name="english">I am english translation here to show how it represend translation</string>
+    <string name="urdu">لوریم اِپسم پرنٹنگ اور ٹائپسیٹنگ انڈسٹری کا صرف ڈمی متن ہے۔ لورینم ایپسم 1500s کے بعد سے ہی اس صنعت کا معیاری ڈمی متن رہا ہے</string>
 </resources>

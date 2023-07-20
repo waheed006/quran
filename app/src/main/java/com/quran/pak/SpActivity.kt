@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.quran.furqan.R
 import com.quran.pak.util.arabicList
 import com.quran.pak.util.englishList
 import com.quran.pak.util.parseJSONFromAssets
@@ -14,7 +15,6 @@ class SpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_splash)
-
         populateData()
         bindSplash()
     }

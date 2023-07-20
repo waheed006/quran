@@ -18,7 +18,6 @@ import java.io.IOException
 class SurahViewModel(application: Application) : AndroidViewModel(application){
     private val surahListLiveData: MutableLiveData<List<Surah>> = MutableLiveData()
 
-
     fun loadSurahListFromAsset() : LiveData<List<Surah>> {
         viewModelScope.launch {
             val surahList = withContext(Dispatchers.IO) {
@@ -49,5 +48,4 @@ class SurahViewModel(application: Application) : AndroidViewModel(application){
             }
         }
     }
-
 }

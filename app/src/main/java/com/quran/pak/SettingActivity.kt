@@ -5,7 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.quran.pak.databinding.ActivitySettingBinding
+import com.quran.furqan.databinding.ActivitySettingBinding
 import com.quran.pak.util.enableEnglishLang
 import com.quran.pak.util.enableUrduLang
 import com.quran.pak.util.getEnglishLang
@@ -18,18 +18,22 @@ class SettingActivity : AppCompatActivity() {
         binding = ActivitySettingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btBack.setOnClickListener {
+            finish()
+        }
+
         defaultState()
         event()
     }
     private fun event(){
-        binding.checkBoxUrdu.setOnCheckedChangeListener { b, isChecked ->
+        binding.checkBoxUrdu.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked){
                 enableUrduLang(applicationContext , true)
             }else{
                 enableUrduLang(applicationContext , false)
             }
         }
-        binding.checkBoxEnglish.setOnCheckedChangeListener { b, isChecked ->
+        binding.checkBoxEnglish.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked){
                 enableEnglishLang(applicationContext , true)
             }else{
@@ -37,20 +41,10 @@ class SettingActivity : AppCompatActivity() {
             }
         }
 
-
         binding.share.setOnClickListener { share() }
         binding.rate.setOnClickListener { rateUs() }
-        binding.privacy.setOnClickListener { openPrivacy() }
-
 
     }
-
-    private fun openPrivacy() {
-        val webIntent = Intent(Intent.ACTION_VIEW)
-        webIntent.data = Uri.parse(getString(R.string.privacy_url))
-        startActivity(webIntent)
-    }
-
     private fun rateUs() {
         val packageName = packageName
         val marketUri = Uri.parse("market://details?id=$packageName")
@@ -70,7 +64,7 @@ class SettingActivity : AppCompatActivity() {
         val appPackageName = packageName
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "text/plain"
-        val shareText = "Check out this Quran app: https://play.google.com/store/apps/details?id=$appPackageName"
+        val shareText = "Check out this Quran Furqan app: https://play.google.com/store/apps/details?id=$appPackageName"
         shareIntent.putExtra(Intent.EXTRA_TEXT, shareText)
         startActivity(Intent.createChooser(shareIntent, "Share App via"))
     }

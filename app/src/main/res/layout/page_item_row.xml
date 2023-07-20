@@ -3,8 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingVertical="@dimen/_10sdp"
-    android:paddingHorizontal="@dimen/_10sdp">
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_10sdp">
+
+    <TextView
+        android:id="@+id/item_view_count"
+        style="@style/text_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="@string/_1"
+        android:textColor="@color/dark_gray" />
 
     <TextView
         android:id="@+id/item_view_arabic"
@@ -13,7 +22,7 @@
         android:layout_gravity="end"
         android:fontFamily="@font/indopak"
         android:justificationMode="inter_word"
-        android:text="الَّذِیْنَ یَنْقُضُوْنَ عَهْدَ اللّٰهِ مِنْ بَعْد"
+        android:text="@string/arabic"
         android:textColor="@color/black"
         android:textSize="@dimen/_22sdp" />
 
@@ -23,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:justificationMode="inter_word"
-        android:text="I am english translation here to show how it represend translation"
+        android:text="@string/english"
         android:textColor="@color/dark_gray"
         android:textSize="@dimen/_16sdp"
         android:visibility="gone" />
@@ -35,7 +44,7 @@
         android:layout_gravity="end"
         android:fontFamily="@font/jameel_noori"
         android:justificationMode="inter_word"
-        android:text="لوریم اِپسم پرنٹنگ اور ٹائپسیٹنگ انڈسٹری کا صرف ڈمی متن ہے۔ لورینم ایپسم 1500s کے بعد سے ہی اس صنعت کا معیاری ڈمی متن رہا ہے"
+        android:text="@string/urdu"
         android:textColor="@color/dark_gray"
         android:textSize="@dimen/_20sdp"
         android:visibility="gone" />

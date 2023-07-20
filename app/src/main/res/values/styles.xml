@@ -7,7 +7,7 @@
     <style name="text_extra_small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">@dimen/_8ssp</item>
@@ -16,7 +16,7 @@
     <style name="text_extra_small_medium">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">@dimen/_8ssp</item>
@@ -25,7 +25,7 @@
     <style name="text_extra_small_semi_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/_8ssp</item>
@@ -34,7 +34,7 @@
     <style name="text_extra_small_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/_8ssp</item>
@@ -53,7 +53,7 @@
     <style name="text_small_medium">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">@dimen/_10ssp</item>
@@ -62,7 +62,7 @@
     <style name="text_small_semi_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/_10ssp</item>
@@ -71,7 +71,7 @@
     <style name="text_small_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/_10ssp</item>
@@ -82,7 +82,7 @@
     <style name="text_normal">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">@dimen/_13ssp</item>
@@ -91,7 +91,7 @@
     <style name="text_normal_medium">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">@dimen/_13ssp</item>
@@ -100,7 +100,7 @@
     <style name="text_normal_semi_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/_13ssp</item>
@@ -109,7 +109,7 @@
     <style name="text_normal_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/_13ssp</item>
@@ -120,7 +120,7 @@
     <style name="text_large">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">@dimen/_15ssp</item>
@@ -129,7 +129,7 @@
     <style name="text_large_medium">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">@dimen/_15ssp</item>
@@ -138,7 +138,7 @@
     <style name="text_large_semi_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/_15ssp</item>
@@ -147,7 +147,7 @@
     <style name="text_large_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/_15ssp</item>
@@ -167,7 +167,7 @@
     <style name="text_extra_large_medium">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">@dimen/_18ssp</item>
@@ -176,7 +176,7 @@
     <style name="text_extra_large_semi_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_semi_bold</item>
         <item name="android:textSize">@dimen/_18ssp</item>
@@ -185,7 +185,7 @@
     <style name="text_extra_large_bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/sea_green</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">@dimen/_18ssp</item>

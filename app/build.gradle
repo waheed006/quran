@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.quran.pak'
+    namespace 'com.quran.furqan'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.quran.pak"
+        applicationId "com.quran.furqan"
         minSdk 21
         targetSdk 33
         versionCode 1

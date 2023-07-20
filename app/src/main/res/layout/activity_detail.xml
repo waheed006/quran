@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/drawerLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-           <LinearLayout
-               android:orientation="horizontal"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/list"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_pages"
+            android:contentDescription="@string/todo" />
 
-               <ImageView
-                   android:visibility="visible"
-                   android:id="@+id/imgBack"
-                   android:layout_width="@dimen/_28sdp"
-                   android:layout_height="@dimen/_28sdp"
-                   android:layout_gravity="center_vertical"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:src="@drawable/ic_back" />
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/todo" />
 
-
-               <View
-                   android:layout_weight="1"
-                   android:layout_width="0dp"
-                   android:layout_height="1dp"/>
-               <ImageView
-                   android:id="@+id/verses"
-                   android:layout_width="@dimen/_28sdp"
-                   android:layout_height="@dimen/_28sdp"
-                   android:layout_gravity="center_vertical"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:src="@drawable/ic_page" />
-
-               <ImageView
-                   android:id="@+id/list"
-                   android:layout_width="@dimen/_28sdp"
-                   android:layout_height="@dimen/_28sdp"
-                   android:layout_gravity="center_vertical"
-                   android:layout_margin="@dimen/_10sdp"
-                   android:src="@drawable/ic_list" />
-           </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/fragContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/indopak"
+            android:text="@string/surah"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp"
+            tools:ignore="RelativeOverlap" />
 
 
     </RelativeLayout>
-</layout>
+
+    <FrameLayout
+        android:id="@+id/fragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

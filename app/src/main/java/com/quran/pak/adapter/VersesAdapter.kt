@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.quran.pak.R
+import com.quran.furqan.R
 import com.quran.pak.detail.Ayah
 import com.quran.pak.util.getEnglishLang
 import com.quran.pak.util.getUrduLang
@@ -38,6 +38,11 @@ class VersesAdapter(
             mText.text = cleanedText
         }
 
+        fun bindItemCount(text: String) {
+            val mText = itemView.findViewById<TextView>(R.id.item_view_count)
+            mText.text =text
+        }
+
         fun bindUrdu(text: String) {
             val mText = itemView.findViewById<TextView>(R.id.item_view_urdu)
             if (getUrduLang(mText.context)) {
@@ -47,7 +52,6 @@ class VersesAdapter(
             mText.text = cleanedText
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VersesViewHolder {
         return if (isPage) {
             VersesViewHolder(
@@ -58,9 +62,7 @@ class VersesAdapter(
             VersesViewHolder(
                 LayoutInflater.from(parent.context).inflate(R.layout.verses_item_row, parent, false)
             )
-
         }
-
     }
 
     override fun getItemCount(): Int {
@@ -85,6 +87,7 @@ class VersesAdapter(
         holder.bindArabic(arabicList[position].text + arabicList[position].end)
         holder.bindUrdu(urduList[position].text)
         holder.bindEnglish(englishList[position].text)
+        holder.bindItemCount(arabicList[position].index.toString())
 
         val editor = sharedPref.edit()
         editor.putInt("LAST_POSITION", position)

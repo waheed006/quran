@@ -4,15 +4,14 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.quran.furqan.R
 import com.quran.pak.DetailActivity
-import com.quran.pak.HomeActivity
-import com.quran.pak.R
 import com.quran.pak.model.Surah
 import com.quran.pak.util.surahIndex
 
@@ -32,6 +31,8 @@ class SurahAdapter(var list: List<Surah>, val context: Context) : RecyclerView.A
         holder.bindName(list[position].name.`in`)
         holder.bindNameAR(list[position].name.ar)
         holder.bindEnglishName(list[position].translation.en)
+        holder.bindSurahType(list[position].type)
+
     }
 
     inner class SurahViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) , View.OnClickListener{
@@ -57,9 +58,19 @@ class SurahAdapter(var list: List<Surah>, val context: Context) : RecyclerView.A
             mName.text = name
         }
 
+        fun bindSurahType(type: String){
+            val surahImg = itemView.findViewById<ImageView>(R.id.surahType)
+            if ("meccan" == type){
+                surahImg.setImageResource(R.drawable.icon_nabawi)
+            }else{
+                surahImg.setImageResource(R.drawable.icon_kaba)
+            }
+        }
+
         override fun onClick(v: View) {
             val intent = Intent(v.context , DetailActivity::class.java)
             surahIndex = list[adapterPosition].index
+            intent.putExtra("SURAH_NAME", list[layoutPosition].name.ar)
             editor.putInt("surahIndex", surahIndex)
             editor.apply()
             v.context.startActivity(intent)
