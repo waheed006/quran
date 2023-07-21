@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingHorizontal="@dimen/_10sdp"
-    android:paddingVertical="@dimen/_15sdp"
-    android:rotationY="-180">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/item_view_count"
-        style="@style/text_large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_10sdp"
-        android:text="@string/_1"
-        android:textColor="@color/dark_gray" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_15sdp"
+        android:rotationY="-180">
 
-    <TextView
-        android:id="@+id/item_view_arabic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:fontFamily="@font/indopak"
-        android:justificationMode="inter_word"
-        android:text="@string/arabic"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_22sdp" />
 
-    <TextView
-        android:id="@+id/item_view_english"
-        style="@style/text_large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:justificationMode="inter_word"
-        android:text="@string/english"
-        android:textColor="@color/dark_gray"
-        android:textSize="@dimen/_16sdp"
-        android:visibility="gone" />
+        <TextView
+            android:id="@+id/item_view_count"
+            style="@style/text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="@string/_1"
+            android:textColor="@color/dark_gray" />
 
-    <TextView
-        android:id="@+id/item_view_urdu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:fontFamily="@font/jameel_noori"
-        android:justificationMode="inter_word"
-        android:text="@string/urdu"
-        android:textColor="@color/dark_gray"
-        android:textSize="@dimen/_20sdp"
-        android:visibility="gone" />
+        <TextView
+            android:id="@+id/item_view_arabic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/indopak"
+            android:justificationMode="inter_word"
+            android:text="@string/arabic"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_22sdp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/item_view_english"
+            style="@style/text_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="@string/english"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_16sdp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_view_urdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:fontFamily="@font/jameel_noori"
+            android:justificationMode="inter_word"
+            android:text="@string/urdu"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/_20sdp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
